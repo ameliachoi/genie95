@@ -23,3 +23,6 @@ jobs:
             cd ~/portfolio
             git pull origin main
             sudo systemctl restart nginx
+            
+      - name: Debug Secrets
+        run: echo "EC2_HOST is ${{ secrets.EC2_HOST}}"
