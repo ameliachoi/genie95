@@ -1,7 +1,20 @@
 import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import { Button, TitleBar } from '@react95/core';
 
 function App() {
-  return <h1>Hello, Windows 95 Style!</h1>;
+  return (
+    <ThemeProvider theme={themes.default}>
+      <GlobalStyle />
+      <window style={{ width: 300 }}>
+        <TitleBar>
+          <span>Genie 95</span>
+        </TitleBar>
+        
+          <Button>Click me!</Button>  
+      </window>
+=    </ThemeProvider>
+  );
 }
 
 export default App;
