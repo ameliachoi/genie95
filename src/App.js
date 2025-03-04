@@ -1,20 +1,22 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
-import { Button, TitleBar } from '@react95/core';
+import { GlobalStyle, ThemeProvider } from '@react95/core';
+import { createGlobalStyle } from 'styled-components';
 
-function App() {
-  return (
-    <ThemeProvider theme={themes.default}>
-      <GlobalStyle />
-      <window style={{ width: 300 }}>
-        <TitleBar>
-          <span>Genie 95</span>
-        </TitleBar>
-        
-          <Button>Click me!</Button>  
-      </window>
-=    </ThemeProvider>
-  );
-}
+import CustomTaskbar from './components/taskbar'
+import Desktop from './components/desktop'
+
+// const BodyFontSizeOverride = createGlobalStyle`
+//   body {
+//     font-size: 15px
+//   }
+// `;
+
+const App = () => (
+  <ThemeProvider>
+    <GlobalStyle />
+    <Desktop />
+    <CustomTaskbar />
+  </ThemeProvider>
+);
 
 export default App;
