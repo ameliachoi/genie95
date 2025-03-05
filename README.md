@@ -21,6 +21,5 @@ My windows 95 porfolio website built with [React95](https://github.com/React95/R
         - `notepadcontents/`
             - `resume.js`
             - `about.js`
-            - `contact.js`
     - `App.js`
     - `index.js`

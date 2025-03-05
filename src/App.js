@@ -1,22 +1,16 @@
 import React from 'react';
 import { GlobalStyle, ThemeProvider } from '@react95/core';
-import { createGlobalStyle } from 'styled-components';
 
+import Desktop from './components/desktop';
 import CustomTaskbar from './components/taskbar'
-import Desktop from './components/desktop'
+import { ModalProvider } from './contexts/ModalContext';
 
-// const BodyFontSizeOverride = createGlobalStyle`
-//   body {
-//     font-size: 15px
-//   }
-// `;
-
-const App = () => (
-  <ThemeProvider>
-    <GlobalStyle />
-    <Desktop />
-    <CustomTaskbar />
-  </ThemeProvider>
-);
+const App = () => {
+  return (
+    <ModalProvider>
+      <CustomTaskbar />
+    </ModalProvider>
+  );
+};
 
 export default App;
