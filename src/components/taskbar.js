@@ -1,16 +1,15 @@
 import React, { useState, useContext } from 'react';
 import { TaskBar as React95Taskbar, List, TitleBar, Modal } from '@react95/core';
 import { Awfxcg321304, Cdplayer107, Notepad2, User, User5 } from '@react95/icons';
-import { useModal } from '../contexts/ModalContext';
 import styled from 'styled-components';
 import Player from './player';
+import DataContext from '../contexts/DataContext';
 
 const StyledListContainer = styled.div`
     width: 150px;
 `;
 
-const CustomTaskbar = () => {
-        const { openModal } = useModal(); // 모달 컨드롤 함수 가져오기
+const CustomTaskbar = ({ openModal }) => { // openModal을 prop로 받음
         const [ showPlayer, setShowPlayer ] = useState(false); // player 상태 관리        
 
         return (
@@ -43,7 +42,10 @@ const CustomTaskbar = () => {
                                 Genie
                             </List.Item>                            
                             <List.Divider />
-                            <List.Item icon={<User5 variant='32x32_4' />} onClick={() => openModal("about")}>
+                            <List.Item icon={<User5 variant='32x32_4' />} onClick={() => {
+                                console.log("About list.Item clicked!"); // 클릭 확인 로그
+                                openModal('about');
+                            }}>
                                 About
                             </List.Item>                    
                         </List>
@@ -53,7 +55,7 @@ const CustomTaskbar = () => {
 
                 {/* taskbar에서 직접 player 실행 */}
                 {showPlayer && <Player closeModal={() => setShowPlayer(false)} />}
-            </>
+        </>    
     );
 };
 
