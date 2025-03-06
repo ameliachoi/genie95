@@ -8,6 +8,8 @@ My windows 95 porfolio website built with [React95](https://github.com/React95/R
 - [React](https://github.com/facebook/react)
 - [React95](https://github.com/React95/React95)
 - [Webamp](https://github.com/captbaritone/webamp)
+- [Minesweeper](https://github.com/nickarocho/minesweeper?tab=readme-ov-file)
+- [jspaint](https://github.com/1j01/jspaint)
 
 ## Components 
 - `public/`
@@ -16,10 +18,9 @@ My windows 95 porfolio website built with [React95](https://github.com/React95/R
         - `desktop.js`
         - `taskbar.js`
         - `shortcuts.js`
-        - `player.js`
-        - `notepad.js`
-        - `notepadcontents/`
-            - `resume.js`
-            - `about.js`
+    - `contexts/`
+        - `dataContext.js`
+        - `ModalContext.js`
+        - `startWebamp.js`
     - `App.js`
     - `index.js`

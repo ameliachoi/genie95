@@ -1,6 +1,8 @@
-import React, { createContext, useState, useContext, Children } from "react";
+import React, { createContext, useState, useContext, useEffect, Children } from "react";
 import { Modal, TitleBar } from "@react95/core";
 import { Awfxcg321304, Cdplayer107, Notepad2, User, User5 } from "@react95/icons";
+import { startWebamp } from "./startWebamp";
+import Player from "../components/player";
 
 // context 생성
 const ModalContext = createContext();
@@ -8,7 +10,6 @@ const ModalContext = createContext();
 // provider 컴포넌트 생성
 export const ModalProvider = ({ children }) => {
     const [modals, setModals] = useState({
-        media: false,
         contact: false,
         resume: false,
         genie: false,
@@ -28,20 +29,6 @@ export const ModalProvider = ({ children }) => {
     return (
         <ModalContext.Provider value={{ modals, openModal, closeModal }}>
             {children}
-
-            {/* media modal */}
-            {modals.media && (
-                <Modal 
-                icon={<Cdplayer107 variant="16x16_4" />}
-                title="Media"
-                titleBarOptions={[<TitleBar.Close key="close" onClick={() => closeModal("media")} />]}
-                width="300px"
-                height="200px"
-                dragOptions={{ defaultPosition: { x: 50, y: 50 } }}
-                >
-                    <p>미디어 플레이어</p>
-                </Modal>
-            )}
 
             {/* contact modal */}
             {modals.contact && (
