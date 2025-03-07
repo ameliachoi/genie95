@@ -1,12 +1,20 @@
 import React, { useContext, useState } from 'react';
-import { GlobalStyle, TaskBar, ThemeProvider } from '@react95/core';
+import { TaskBar } from '@react95/core';
+import { createGlobalStyle } from 'styled-components';
 
 import Desktop from './components/desktop';
 import CustomTaskbar from './components/taskbar';
 import Notepad from './components/notepad';
 import DataContext, { DataProvider } from './contexts/DataContext';
 import GenieModal from './components/contents/Genie';
+import Video from './components/contents/Video'
+import Shortcuts from './components/shortcuts';
 
+const BodyFontSizeOverride = createGlobalStyle`
+  body{
+    font-size: 15px
+  }
+`;
 
 function App() {
   const [modalData, setModalData] = useState(null); //modal data 전역변수 설정
@@ -17,6 +25,11 @@ function App() {
 
     if (id === 'genie') {
       setModalData('genie');
+      return;
+    }
+
+    if (id === 'video') {
+      setModalData('video');
       return;
     }
 
@@ -42,9 +55,13 @@ const closeModal = () => {
 
   return (
     <DataProvider>
+      <BodyFontSizeOverride />
+      <Desktop />
+      {/* <Shortcuts openModal={openModal} /> */}
       <CustomTaskbar openModal={openModal} /> {/* openModal을 props로 전달 */}
       {modalData && (modalData === 'about' || modalData === 'resume') && (<Notepad selectedItem={modalData} closeModal={closeModal}/>)}
       {modalData === 'genie' && <GenieModal closeModal={closeModal}/>}
+      {modalData === 'video' && <Video closeModal={closeModal}/>}
     </DataProvider>
   );
 };

@@ -40,7 +40,7 @@ const CustomTaskbar = ({ openModal }) => { // openModal을 prop로 받음
                             </List.Item>
                             <List.Item icon={<User variant='32x32_4' />} onClick={() => openModal("genie")}>
                                 Genie
-                            </List.Item>                        
+                            </List.Item>                
                             <List.Divider />
                             <List.Item icon={<User5 variant='32x32_4' />} onClick={() => {
                                 console.log("About list.Item clicked!"); // 클릭 확인 로그
