@@ -3,7 +3,7 @@ import { Modal, TitleBar } from "@react95/core";
 import { Cdplayer107 } from "@react95/icons";
 import { startWebamp } from "../../context/startWebamp";
 
-const Player = ({ closeModal }) => {
+const PlayerModal = ({ closeModal }) => {
     useEffect(() => {
         startWebamp(); // 모달이 열릴 때 webamp 실행
     }, []); // 한 번만 실행
@@ -13,4 +13,4 @@ const Player = ({ closeModal }) => {
     );
 };
 
-export default Player;
+export default PlayerModal;

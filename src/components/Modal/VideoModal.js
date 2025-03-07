@@ -2,7 +2,7 @@ import React from 'react';
 import { Frame, List, Modal, TitleBar } from '@react95/core';
 import { Mplayer13 } from '@react95/icons';
 
-const Video = ({ closeModal }) => {
+const VideoModal = ({ closeModal }) => {
     return (
         <Modal
         icon={<Mplayer13 variant='16x16_4'/>}
@@ -16,9 +16,9 @@ const Video = ({ closeModal }) => {
             height: 400
         }}
         >
-            <Video w='320px' src={'/friends.mp4'} name="Friends.avi"></Video>
+            <video width='320px' src={'/assets/friends.mp4'} name="Friends.avi"></video>
         </Modal>
     );
 };
 
-export default Video;
+export default VideoModal;

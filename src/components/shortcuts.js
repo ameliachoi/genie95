@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Button } from '@react95/core';
-import { User5, Cdplayer107 } from '@react95/icons';
+import { Notepad2, User5, Cdplayer107 } from '@react95/icons';
 import { startWebamp } from '../context/startWebamp';
 
 const StyledShortcuts = styled.div`
@@ -14,7 +14,7 @@ const Shortcuts = ({ openModal }) => { // props로 받아야함
         return (
             <div>
                 <StyledShortcuts>
-                    <Button onClick={() => openModal('about')}>
+                    <Button>
                     <div>About</div>
                     </Button>
                 </StyledShortcuts>
@@ -27,7 +27,7 @@ const Shortcuts = ({ openModal }) => { // props로 받아야함
                 </StyledShortcuts>
                 <StyledShortcuts>
                     <Button
-                    onClick={() => openModal('video')}>
+                    onClick={() => openModal('VideoModal')}>
                         <div>Friends.avi</div>
                     </Button>
                 </StyledShortcuts>

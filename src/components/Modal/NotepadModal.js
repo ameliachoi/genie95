@@ -1,30 +1,20 @@
 import React from 'react';
-import { Frame, List, Modal, TitleBar } from '@react95/core';
-import ContentFactory from '../contents/ContentFactory';
-import { ListItem } from '@react95/core/ListItem';
+import { Frame, List, ButtonModal, TitleBar, Button, Modal } from '@react95/core';
+import DataContext from '../../context/DataContext.js';
 import { Notepad1 } from '@react95/icons';
 
-function Notepad({ selectedItem, closeModal }) {
-
+const NotepadModal = ({ closeModal, contentType }) => {
     return (
         <Modal
             icon={<Notepad1 variant='16x16_4'/>}
-            title={`Notepad - ${selectedItem.name}`}
+            title='Notepad'
             closeModal={closeModal}
             titleBarOptions={<TitleBar.Close key="close" onClick={closeModal}/>}
-            buttons={[{ value: "Close", onClick: closeModal}]}
             style={{
                 left: "50%",
                 top: "15%",
                 width: 450,
             }}
-            menu={[
-                { name: "File", list: 
-                    <List width='200px'>
-                        <List.Item onClick={closeModal}>Exit</List.Item>
-                    </List>},
-                { name: "Edit", List: []}
-            ]}
         >
             <Frame
                 bg='white'
@@ -32,14 +22,14 @@ function Notepad({ selectedItem, closeModal }) {
                 height='100%'
                 padding={20}
                 style={{
-                    overflowY: 'auto',
-                    maxHeight: '60vh',
+                    
                 }}
-            >
-                <ContentFactory id={selectedItem.id} />
-            </Frame>
+            />
+            <div> 
+                {DataContext[contentType] || <p>No content available</p>}
+            </div>
         </Modal>
     );
-}
+};
 
-export default Notepad;
+export default NotepadModal;
