@@ -2,13 +2,13 @@ import React, { useContext, useState } from 'react';
 import { TaskBar } from '@react95/core';
 import { createGlobalStyle } from 'styled-components';
 
-import Desktop from './components/desktop';
-import CustomTaskbar from './components/taskbar';
-import Notepad from './components/notepad';
-import DataContext, { DataProvider } from './contexts/DataContext';
-import GenieModal from './components/contents/Genie';
-import Video from './components/contents/Video'
-import Shortcuts from './components/shortcuts';
+import Desktop from './components/Desktop';
+import CustomTaskbar from './components/Taskbar';
+import Notepad from './components/Modal/NotepadModal';
+import DataContext, { DataProvider } from './context/DataContext';
+import GenieModal from './components/Modal/GenieModal';
+import Video from './components/Modal/VideoModal';
+import Shortcuts from './components/Shortcuts';
 
 const BodyFontSizeOverride = createGlobalStyle`
   body{
@@ -16,7 +16,7 @@ const BodyFontSizeOverride = createGlobalStyle`
   }
 `;
 
-function App() {
+function App(props) {
   const [modalData, setModalData] = useState(null); //modal data 전역변수 설정
   const data = useContext(DataContext); // useContext를 사용해서 data 가져오기
   

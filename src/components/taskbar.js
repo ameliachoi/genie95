@@ -2,8 +2,8 @@ import React, { useState, useContext } from 'react';
 import { TaskBar as React95Taskbar, List, TitleBar, Modal } from '@react95/core';
 import { Awfxcg321304, Cdplayer107, Notepad2, User, User5 } from '@react95/icons';
 import styled from 'styled-components';
-import Player from './player';
-import DataContext from '../contexts/DataContext';
+import Player from './Modal/PlayerModal';
+import DataContext from '../context/DataContext';
 
 const StyledListContainer = styled.div`
     width: 150px;

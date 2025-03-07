@@ -1,6 +1,6 @@
 import React from 'react';
 import { Frame, List, Modal, TitleBar } from '@react95/core';
-import ContentFactory from './contents/ContentFactory';
+import ContentFactory from '../contents/ContentFactory';
 import { ListItem } from '@react95/core/ListItem';
 import { Notepad1 } from '@react95/icons';
 

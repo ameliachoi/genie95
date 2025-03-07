@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Button } from '@react95/core';
 import { User5, Cdplayer107 } from '@react95/icons';
-import { startWebamp } from '../contexts/startWebamp';
+import { startWebamp } from '../context/startWebamp';
 
 const StyledShortcuts = styled.div`
     margin-left: 20px;

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Modal, TitleBar } from "@react95/core";
 import { Cdplayer107 } from "@react95/icons";
-import { startWebamp } from "../contexts/startWebamp";
+import { startWebamp } from "../../context/startWebamp";
 
 const Player = ({ closeModal }) => {
     useEffect(() => {
