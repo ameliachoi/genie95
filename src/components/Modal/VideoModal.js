@@ -1,23 +1,26 @@
 import React from 'react';
-import { Frame, List, Modal, TitleBar } from '@react95/core';
+import ReactDOM from 'react-dom';
+
+import { Video, Frame, List, Modal, TitleBar } from '@react95/core';
 import { Mplayer13 } from '@react95/icons';
 
-const VideoModal = ({ closeModal }) => {
+const VideoModal = ({ onClose }) => {
     return (
-        <Modal
-        icon={<Mplayer13 variant='16x16_4'/>}
-        title='Friends.avi'
-        closeModal={closeModal}
-        titleBarOptions={<TitleBar.Close key="close" onClick={closeModal}/>}
-        style={{
-            left: "50%",
-            top: "15%",
-            width: 500,
-            height: 400
-        }}
-        >
-            <video width='320px' src={'/assets/friends.mp4'} name="Friends.avi"></video>
-        </Modal>
+            <Video
+            w='320px'
+            src="/Friends.mp4"
+            autoPlay
+            controls
+            closeModal={onClose}
+            titleBarOptions={<TitleBar.Close key="close" onClick={onClose}/>}
+            style={{
+                left: "50%",
+                top: "15%",
+                width: 500,
+                height: 400,
+                marginBottom: 4
+            }}
+            />
     );
 };
 

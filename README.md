@@ -25,4 +25,3 @@ My windows 95 porfolio website built with [React95](https://github.com/React95/R
 - [Webamp](https://github.com/captbaritone/webamp)
 - [Minesweeper](https://github.com/nickarocho/minesweeper?tab=readme-ov-file)
 - [jspaint](https://github.com/1j01/jspaint)
-- [Win95 Media Player](https://benwiley4000.github.io/win95-media-player/)

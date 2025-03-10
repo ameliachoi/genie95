@@ -1,8 +1,8 @@
 import React from 'react';
 import { useModal } from '../context/ModalContext';
 import GenieModal from './Modal/GenieModal';
-import VideoModal from './Modal/VideoModal';
 import NotepadModal from './Modal/NotepadModal';
+import VideoModal from './Modal/VideoModal';
 
 const ModalManager = () => {
     const { modals, closeModal } = useModal();
