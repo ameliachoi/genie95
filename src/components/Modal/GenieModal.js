@@ -2,13 +2,13 @@ import React from 'react';
 import { Frame, List, Modal, TitleBar } from '@react95/core';
 import { User } from '@react95/icons';
 
-const GenieModal = ({ closeModal }) => {
+const GenieModal = ({ onClose }) => {
     return (
         <Modal
         icon={<User variant='16x16_4'/>}
         title='Genie'
-        closeModal={closeModal}
-        titleBarOptions={<TitleBar.Close key="close" onClick={closeModal}/>}
+        closeModal={onClose}
+        titleBarOptions={<TitleBar.Close key="close" onClick={onClose}/>}
         style={{
             left: "50%",
             top: "15%",

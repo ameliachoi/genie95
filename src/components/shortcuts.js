@@ -10,26 +10,22 @@ const StyledShortcuts = styled.div`
     align-items: center;
 `
 
-const Shortcuts = ({ openModal }) => { // props로 받아야함
+function Shortcuts({ openModal }) { // props로 받아야함
         return (
             <div>
                 <StyledShortcuts>
-                    <Button>
+                    <Button icon={<Notepad2 variant='32x32_4'/>} onClick={() => openModal("NotepadModal", { contentType: "About" })} />
                     <div>About</div>
-                    </Button>
                 </StyledShortcuts>
                 <StyledShortcuts>
                     <Button
                     key={<Cdplayer107 variant='32x32_4'/>}
-                    onClick={() => startWebamp()}
-                />
+                    onClick={() => startWebamp()} />
                     <div>Media</div>
                 </StyledShortcuts>
                 <StyledShortcuts>
-                    <Button
-                    onClick={() => openModal('VideoModal')}>
-                        <div>Friends.avi</div>
-                    </Button>
+                    <Button icon={<Cdplayer107 variant='32x32_4'/>} onClick={() => openModal('VideoModal')} />
+                    <div>Friends.avi</div>
                 </StyledShortcuts>
             </div>
         );

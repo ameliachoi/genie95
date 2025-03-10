@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import NotepadModal from './Modal/NotepadModal';
 import Shortcuts from './Shortcuts';
 import DataContext from '../context/DataContext';
-import PlayerModal from './Modal/PlayerModal';
+import Player from './Player';
 
 function Desktop() {
 
