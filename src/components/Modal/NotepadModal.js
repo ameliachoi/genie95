@@ -4,6 +4,11 @@ import DataContext from '../../context/DataContext.js';
 import { Notepad1 } from '@react95/icons';
 
 const NotepadModal = ({ onClose, contentType }) => {
+    const content = DataContext[contentType];
+
+    console.log("content Type:", contentType);
+    console.log("content:", content);
+
     return (
         <Modal
             icon={<Notepad1 variant='16x16_4'/>}
@@ -24,10 +29,9 @@ const NotepadModal = ({ onClose, contentType }) => {
                 style={{
                     
                 }}
-            />
-            <div> 
-                {DataContext[contentType] || <p>No content available</p>}
-            </div>
+            >
+                {content ? content: <p>No content available</p>}
+            </Frame>
         </Modal>
     );
 };

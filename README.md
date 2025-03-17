@@ -8,13 +8,22 @@ My windows 95 porfolio website built with [React95](https://github.com/React95/R
 - `public/`
 - `src/`
     - `components/`
-        - `desktop.js`
-        - `taskbar.js`
-        - `shortcuts.js`
-    - `contexts/`
-        - `dataContext.js`
+        - Modal/
+            - `GenieModal.js`
+            - `NotepadModal.js`
+            - `VideoModal.js`
+        - `Desktop.js`
+        - `Taskbar.js`
+        - `Shortcuts.js`
+        - `Player.js`
+        - `ModalManager.js`
+    - `context/`
+        - `Clippy.js`
+        - `DataContext.js`
         - `ModalContext.js`
         - `startWebamp.js`
+    - styles
+        - `Desktop.css`
     - `App.js`
     - `index.js`
 

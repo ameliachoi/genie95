@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { TaskBar } from '@react95/core';
 import { createGlobalStyle } from 'styled-components';
 
@@ -13,14 +13,29 @@ const BodyFontSizeOverride = createGlobalStyle`
   }
 `;
 
-function App() {
+const App = () => {
+  const [isAudioPlayed, setIsAudioPlayed] = useState(false);
+
+  const playSound = () => {
+    if (!isAudioPlayed) {
+      const audio = new Audio('/startup-sound.mp3');
+      audio.play();
+      setIsAudioPlayed(true);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('click', playSound);
+    return () => document.removeEventListener('click', playSound);
+  }, [isAudioPlayed]);
+  
   return (
-      <ModalProvider>
-        <BodyFontSizeOverride />
-        <Desktop />
-        <CustomTaskbar />
-        <ModalManager />
-      </ModalProvider>
+    <ModalProvider>
+      <BodyFontSizeOverride />
+      <Desktop />
+      <CustomTaskbar />
+      <ModalManager />
+    </ModalProvider>
   );
 };
 
