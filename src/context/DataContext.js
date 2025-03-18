@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { createContext, useContext } from 'react';
 
-const DataContext = {
+const DataContext = createContext({
     About: (
         <>
         <div>
@@ -41,8 +41,19 @@ const DataContext = {
             </div>
             <div>
             <p>
-                <h2>Customer Service Manager at WISETRACKER</h2>
-                <h3>APR 2021 - JUL 2022</h3>
+                <h3>Partner Solutions Manager at AppsFlyer</h3>
+                <p>AUG 2022 - JUL 2024</p>
+                <ul>
+                    <li>Supported Ad-tech partners with setting up AppsFlyer for marketing campaigns, shared fraud detection insights, and provided localized guidelines for the Korean market</li>
+                    <li>Helped partners integrate their accounts with AppsFlyer platform in a dedicated manner</li> 
+                    <li>Troubleshoot and address inquiries effectively for ad networks, SRNs, analytic providers, and agencies</li>   
+                </ul>
+            </p>
+            </div>
+            <div>
+            <p>
+                <h3>Customer Service Manager at WISETRACKER</h3>
+                <p>APR 2021 - AUG 2022</p>
                 <ul>
                     <li>Provided in-depth assistance to customers navigating the dashboard, including mobile app taxonomy & data visualization reports.</li>
                     <li>Planned and executed digital marketing strategies, managing multiple advertisement campaigns.</li>
@@ -54,14 +65,22 @@ const DataContext = {
             <div>
             <p>
                 <h2>Education</h2>
-                <h3>Bachelor in Korean Studies at Hankuk University of Foreign Studies</h3>
-                <p>MAR 2014 - AUG 2018</p>
-                <p>3.49/4.5 GPA</p>  
+                <h3>Bachelor in Korean Studies</h3>
+                <h4>Hankuk University of Foreign Studies</h4>
+                <p>MAR 2014 - AUG 2018  |  3.49/4.5 GPA</p>
             </p>
             </div>
         </div>
         </>
     )
+});
+
+export const DataProvider = ({ children }) => {
+    return (
+        <DataContext.Provider value={data}>
+            {children}
+        </DataContext.Provider>
+    );
 };
 
 export default DataContext;

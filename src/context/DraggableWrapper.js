@@ -40,11 +40,11 @@ const DraggableWrapper = ({ children }) => {
                 cursor: 'grabbing'
             }}
             >
-                <div
+                {/* <div
                 onMouseDown={handleMouseDown}
                 >
                     Drag Me
-                </div>
+                </div> */}
             {children}
             </div>
         </div>  

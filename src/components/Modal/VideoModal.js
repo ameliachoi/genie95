@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import { Video, Frame, List, Modal, TitleBar } from '@react95/core';
 import { Mplayer13 } from '@react95/icons';
