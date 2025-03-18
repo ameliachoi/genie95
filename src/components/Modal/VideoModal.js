@@ -13,6 +13,12 @@ const VideoModal = ({ onClose }) => {
             controls
             closeModal={onClose}
             titleBarOptions={<TitleBar.Close key="close" onClick={onClose}/>}
+            dragOptions={{
+                defaultPosition: {
+                    x: 100,
+                    y: 100
+                }
+            }}
             style={{
                 left: "50%",
                 top: "15%",

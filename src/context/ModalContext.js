@@ -1,4 +1,6 @@
+import { Modal } from '@react95/core';
 import React, { createContext, useState, useContext } from 'react';
+import DraggableWrapper from './DraggableWrapper';
 
 // context 생성
 const ModalContext = createContext();
@@ -24,8 +26,14 @@ export const ModalProvider = ({ children }) => {
     };
 
     return (
-        <ModalContext.Provider value={value}>
+        <ModalContext.Provider value={{value}}>
             {children}
+            {ModalContext && (
+                <DraggableWrapper>
+                    {ModalContext}
+                    <button onClick={() => closeModal()}>Close</button>
+                </DraggableWrapper>
+            )}
         </ModalContext.Provider>
     );
 };

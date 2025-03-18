@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Button } from '@react95/core';
-import { Notepad2, User5, Cdplayer107, Mplayer13 } from '@react95/icons';
+import { Notepad2, User5, Cdplayer107, Mplayer13, Mspaint } from '@react95/icons';
 import { startWebamp } from '../context/startWebamp';
 import ModalManager from './ModalManager';
 
@@ -27,11 +27,10 @@ const Shortcuts = ({ openModal }) => { // props로 받아야함
                     <p
                     style={{
                         fontSize: '12px',
-                        fontWeight: 'bold',
                         marginTop: '5px',
                         width: 100,
                         textAlign: 'center',
-                        color: 'black'
+                        color: 'white'
                     }}
                     >About</p>
                 </StyledShortcuts> 
@@ -42,11 +41,10 @@ const Shortcuts = ({ openModal }) => { // props로 받아야함
                     <p
                     style={{
                         fontSize: '12px',
-                        fontWeight: 'bold',
                         marginTop: '5px',
                         width: 100,
                         textAlign: 'center',
-                        color: 'black'
+                        color: 'white'
                     }}
                     >Media</p>
                 </StyledShortcuts>
@@ -57,16 +55,29 @@ const Shortcuts = ({ openModal }) => { // props로 받아야함
                     <p
                     style={{
                         fontSize: '12px',
-                        fontWeight: 'bold',
                         marginTop: '5px',
                         width: 100,
                         textAlign: 'center',
-                        color: 'black'
+                        color: 'white'
                     }}
                     >Friends.avi</p>
                 </StyledShortcuts>
+                <StyledShortcuts>
+                    <div onClick={() => openModal("PaintModal")}>
+                        <Mspaint variant='32x32_4' style={{ marginLeft: 32, marginTop: 20}}/>
+                    </div>
+                    <p
+                    style={{
+                        fontSize: '12px',
+                        marginTop: '5px',
+                        width: 100,
+                        textAlign: 'center',
+                        color: 'white'
+                    }}
+                    >Paint</p>
+                </StyledShortcuts>
             </div>
         );
-};
+}; 
 
 export default Shortcuts;
