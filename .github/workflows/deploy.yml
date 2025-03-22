@@ -22,10 +22,13 @@ jobs:
           script: |
             cd /home/ubuntu/portfolio
             git pull origin main
+            git reset --hard origin/main
             npm install
             npm run build
             sudo rm -rf /var/www/html/*
             sudo cp -r build/* /var/www/html/
+            sudo chown -R www-data:www-data /var/www/html
+            sudo chmod -R 755 /var/www/html
             sudo systemctl restart nginx
             
       - name: Debug Secrets
