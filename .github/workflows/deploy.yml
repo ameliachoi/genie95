@@ -20,13 +20,13 @@ jobs:
           username: ubuntu
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            ssh -o StrictHostKeyChecking=no ubuntu@${{ secrets.EC2_HOST }} <<EOF
             cd /home/ubuntu/portfolio
             git pull origin main
             npm install
             npm run build
+            sudo rm -rf /var/www/html/*
+            sudo cp -r build/* /var/www/html/
             sudo systemctl restart nginx
-            EOF
             
       - name: Debug Secrets
         run: echo "EC2_HOST is ${{ secrets.EC2_HOST}}"

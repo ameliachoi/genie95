@@ -4,7 +4,7 @@ const DataContext = createContext({
     About: (
         <>
         <div>
-            <h1>About</h1>
+            <h1>About 01</h1>
             <p>
                 Hi! I've been working customer-faced manager with over 4 years of experience in Ad-tech field, transiting from a non-technical background to mastering complex systems.
             </p>
