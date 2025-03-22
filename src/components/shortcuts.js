@@ -34,7 +34,7 @@ const Shortcuts = ({ openModal }) => { // props로 받아야함
                     }}
                     >About</p>
                 </StyledShortcuts> 
-                <StyledShortcuts>
+                {/* <StyledShortcuts>
                     <div onClick={() => startWebamp()}>
                     <Cdplayer107 variant='32x32_4' style={{ marginLeft: 32, marginTop: 20}}/>
                     </div>
@@ -47,7 +47,7 @@ const Shortcuts = ({ openModal }) => { // props로 받아야함
                         color: 'white'
                     }}
                     >Media</p>
-                </StyledShortcuts>
+                </StyledShortcuts> */}
                 <StyledShortcuts>
                     <div onClick={() => openModal("VideoModal")}>
                         <Mplayer13 variant='32x32_4' style={{ marginLeft: 32, marginTop: 20}}/>

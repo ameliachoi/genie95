@@ -10,7 +10,7 @@ const GenieModal = ({ onClose }) => {
         closeModal={onClose}
         titleBarOptions={<TitleBar.Close key="close" onClick={onClose}/>}
         style={{
-            left: "30%",
+            left: "60%",
             top: "10%",
             width: 300,
             height: 322

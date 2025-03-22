@@ -28,7 +28,7 @@ const NotepadModal = ({ onClose, contentType }) => {
             titleBarOptions={<TitleBar.Close key="close" onClick={onClose}/>}
             buttons={[{ value: 'Close', onClick: onClose }]}
             style={{
-                left: "50%",
+                left: "25%",
                 top: "15%",
                 width: "30%",
                 height: "70%"
@@ -51,7 +51,6 @@ const NotepadModal = ({ onClose, contentType }) => {
                 <Alert 
                 title='Warning' 
                 message="You are not allowed to copy text from this application."
-                defaultPostion='center'
                 titleBarOptions={<TitleBar.Close key="close" onClick={handleCloseAlert}/>}
                 hasSound={withSound}
                 buttons={[{ value: 'OK', onClick: onClose }]}

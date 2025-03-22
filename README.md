@@ -11,6 +11,7 @@ My windows 95 porfolio website built with [React95](https://github.com/React95/R
         - Modal/
             - `GenieModal.js`
             - `NotepadModal.js`
+            - `PaintModal.js`
             - `VideoModal.js`
         - `Desktop.js`
         - `Taskbar.js`
@@ -18,7 +19,6 @@ My windows 95 porfolio website built with [React95](https://github.com/React95/R
         - `Player.js`
         - `ModalManager.js`
     - `context/`
-        - `Clippy.js`
         - `DataContext.js`
         - `ModalContext.js`
         - `startWebamp.js`
