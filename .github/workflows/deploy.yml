@@ -13,6 +13,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: Check import case issues
+        run: |
+          chmod +x ./scripts/check-imports.sh
+          ./scripts/check-imports.sh
+
       - name: Deploy to EC2
         uses: appleboy/ssh-action@master
         with:
