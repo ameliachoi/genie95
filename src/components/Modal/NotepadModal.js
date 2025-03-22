@@ -37,7 +37,7 @@ const NotepadModal = ({ onClose, contentType }) => {
                 { name: 'File',
                 list: <List>
                     <List.Item onClick={() => {
-                        onClose(true);
+                        onClose();
                     }}>Exit</List.Item>
                 </List>},
 
@@ -50,7 +50,7 @@ const NotepadModal = ({ onClose, contentType }) => {
             {showAlert && (
                 <Alert 
                 title='Warning' 
-                message='You cannot allow to copy text from this application.'
+                message="You are not allowed to copy text from this application."
                 defaultPostion='center'
                 titleBarOptions={<TitleBar.Close key="close" onClick={handleCloseAlert}/>}
                 hasSound={withSound}

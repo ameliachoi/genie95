@@ -10,13 +10,13 @@ const GenieModal = ({ onClose }) => {
         closeModal={onClose}
         titleBarOptions={<TitleBar.Close key="close" onClick={onClose}/>}
         style={{
-            left: "50%",
-            top: "15%",
+            left: "30%",
+            top: "10%",
             width: 300,
-            height: 300
+            height: 322
         }}
         >
-            <img src='/genie.jpg' alt='Genie' style={{ maxWidth: '100%', maxHeight: '100%'}} />
+            <img src='/genie.jpg' alt='Genie' style={{ width: '100%', height: '100%'}} />
         </Modal>
     );
 };
